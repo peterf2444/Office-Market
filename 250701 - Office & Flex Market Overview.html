@@ -1,0 +1,616 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Flight to Quality: U.S. Office Market & Flex Space Ascent</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Kiln-Inspired Colors Applied to Previous Layout */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F9FAFB; /* Off-white background */
+            color: #1F2937; /* Dark charcoal text */
+        }
+        .kpi-value {
+            font-weight: 700;
+            line-height: 1.1;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+        }
+        @media (max-width: 768px) {
+            .chart-container {
+                height: 300px;
+            }
+        }
+        .kiln-orange { color: #F97316; }
+        .kiln-green { color: #10B981; }
+        .kiln-red { color: #EF4444; }
+        .kiln-blue { color: #3B82F6; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+
+    <div class="container mx-auto p-4 md:p-8">
+
+
+        <!-- Header Section -->
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">The Resilient Ascent of Prime Office Assets</h1>
+            <p class="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto">A data-driven look into the U.S. office market's bifurcated recovery, the pronounced "flight to quality," and the integral role of flexible workspaces in shaping the future of work.</p>
+        </header>
+
+
+        <main class="space-y-8">
+
+
+            <!-- Section 1: The Great Divide -->
+            <section class="bg-white rounded-lg shadow-sm p-6 md:p-8 border border-gray-200">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2 text-center">The Great Divide: A Tale of Two Markets</h2>
+                <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">Since 2020, the office market has split. Demand has overwhelmingly concentrated in high-quality, amenity-rich buildings, leaving non-prime assets behind. This is evident in both net absorption and where deals are happening.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="flex flex-col items-center justify-center text-center p-4">
+                        <div class="mb-4">
+                            <p class="text-lg text-gray-500">Prime Office Net Absorption</p>
+                            <p class="text-5xl md:text-6xl kpi-value kiln-green">+60M</p>
+                            <p class="text-lg text-gray-500">Sq. Ft. (Since 2020)</p>
+                        </div>
+                        <div class="w-24 h-px bg-gray-200 my-4"></div>
+                        <div>
+                             <p class="text-lg text-gray-500">Non-Prime Net Absorption</p>
+                            <p class="text-5xl md:text-6xl kpi-value kiln-red">-165M</p>
+                            <p class="text-lg text-gray-500">Sq. Ft. (Since 2020)</p>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="netAbsorptionChart"></canvas>
+                    </div>
+                </div>
+                 <p class="text-center text-xs text-gray-400 mt-2">Source: CBRE Research</p>
+                <hr class="my-8 border-gray-200">
+                <div class="mt-8">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-1 text-center">Focus on Quality: Transaction Activity by Class</h3>
+                    <p class="text-center text-gray-600 mb-6 max-w-2xl mx-auto text-sm">The "flight to quality" is clear in leasing data. In Q1 2025, Trophy assets captured a dominant 44.6% share of all transaction activity, nearly doubling their pre-pandemic share.</p>
+                    <div class="chart-container h-[300px] max-w-3xl">
+                         <canvas id="transactionActivityChart"></canvas>
+                    </div>
+                    <p class="text-center text-xs text-gray-400 mt-2">Source: Avison Young, Q1 2025 U.S. Office Report (p. 23)</p>
+                </div>
+            </section>
+            
+            <!-- Section 2: Key Recovery Indicators -->
+            <section class="bg-white rounded-lg shadow-sm p-6 md:p-8 border border-gray-200">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6 text-center">Key Recovery Indicators Pointing Upwards</h2>
+                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                    <div class="bg-blue-50 p-6 rounded-lg">
+                        <p class="text-gray-600 text-lg">YoY Leasing Activity (Q1 '25)</p>
+                        <p class="text-5xl kpi-value text-gray-900">18% ▲</p>
+                        <p class="text-gray-500 mt-2">Signaling renewed tenant confidence.</p>
+                    </div>
+                     <div class="bg-green-50 p-6 rounded-lg">
+                        <p class="text-gray-600 text-lg">National Vacancy Rate</p>
+                        <p class="text-5xl kpi-value text-gray-900">19%</p>
+                        <p class="text-gray-500 mt-2">Stabilized, suggesting market peak.</p>
+                    </div>
+                    <div class="bg-orange-50 p-6 rounded-lg">
+                        <p class="text-gray-600 text-lg">Prime Office Vacancy</p>
+                        <p class="text-5xl kpi-value text-gray-900">14.8%</p>
+                        <p class="text-gray-500 mt-2">Highlighting resilience of top-tier assets.</p>
+                    </div>
+                </div>
+                <p class="text-center text-xs text-gray-400 mt-4">Source: CBRE Q1 2025 U.S. Office Figures</p>
+            </section>
+
+
+            <!-- "Hidden Tightness" Section -->
+            <section class="bg-white rounded-lg shadow-sm p-6 md:p-8 border border-gray-200">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2 text-center">The Hidden Tightness: A Closer Look at Desirability</h2>
+                <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">Headline availability rates are misleading. When undesirable spaces (outdated, poorly located, or financially troubled) are removed, the true availability of quality office space is much lower.</p>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <div class="lg:col-span-1 bg-gray-50 p-6 rounded-lg border border-gray-200 flex flex-col justify-center">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2 text-center">U.S. Gateway Markets</h3>
+                        <div class="text-center">
+                            <p class="text-lg text-gray-500">Total Availability</p>
+                            <p class="text-5xl kpi-value kiln-red">21.3%</p>
+                        </div>
+                        <div class="w-24 h-px bg-gray-200 my-4 mx-auto"></div>
+                        <div class="text-center">
+                            <p class="text-lg text-gray-500">"Desirable" Availability</p>
+                            <p class="text-5xl kpi-value kiln-green">16.1%</p>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-2">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4 text-center">Market Spotlight: True Availability</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div class="bg-gray-50 p-6 rounded-lg border border-gray-200 text-center">
+                                <h4 class="font-semibold text-lg text-gray-800">San Francisco</h4>
+                                <p class="text-sm text-gray-500 mb-2">Headline vs. Desirable Rate</p>
+                                <p class="text-3xl kpi-value"><span class="kiln-red">31.6%</span> → <span class="kiln-green">23.6%</span></p>
+                            </div>
+                            <div class="bg-gray-50 p-6 rounded-lg border border-gray-200 text-center">
+                                <h4 class="font-semibold text-lg text-gray-800">Manhattan</h4>
+                                <p class="text-sm text-gray-500 mb-2">Headline vs. Desirable Rate</p>
+                                <p class="text-3xl kpi-value"><span class="kiln-red">17.8%</span> → <span class="kiln-green">13.1%</span></p>
+                            </div>
+                        </div>
+                        <p class="text-center text-sm text-gray-600 mt-4">In San Francisco, 25% of buildings with available space account for 86% of the total available square footage, showing how concentrated the "vacancy" issue truly is.</p>
+                    </div>
+                </div>
+                <p class="text-center text-sm text-gray-500 mt-6">Source: Avison Young, "The hidden tightness in office markets"</p>
+            </section>
+
+
+            <!-- Leasing Dynamics Section -->
+            <section class="bg-white rounded-lg shadow-sm p-6 md:p-8 border border-gray-200">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2 text-center">The Closing Window: Leasing Dynamics Are Shifting</h2>
+                <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">Key indicators show that the market is beginning to favor landlords. The period of peak tenant advantage and record-high concessions is showing signs of ending.</p>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Concession Packages Tapering Off</h3>
+                        <p class="text-gray-600 mb-4">After five consecutive years of growth, landlord concession packages (free rent and tenant improvement allowances) have begun to level off and even decline slightly in Q1 2025, signaling a turn in the market.</p>
+                        <div class="chart-container h-[280px]">
+                            <canvas id="concessionsChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                            <h4 class="font-semibold text-lg text-gray-800">Trophy Rents Are Climbing</h4>
+                            <p class="text-gray-600 mt-1">Both base rents and net effective rents for Trophy assets saw a sharp increase in Q1 2025, a leading indicator for where the rest of the high-quality market is headed.</p>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                            <h4 class="font-semibold text-lg text-gray-800">Lease Terms Are Extending</h4>
+                            <p class="text-gray-600 mt-1">The average lease term for Trophy properties has been trending upwards, reaching <span class="font-bold">118 months</span>. Longer terms signal growing landlord confidence and less flexibility for tenants.</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-center text-sm text-gray-500 mt-4">Source: Avison Young, Q1 2025 U.S. Office Report</p>
+            </section>
+            
+            <!-- Market Spotlight: San Francisco -->
+            <section class="bg-white rounded-lg shadow-sm p-6 md:p-8 border border-gray-200">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2 text-center">Market Spotlight: San Francisco's Rebound</h2>
+                <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">San Francisco serves as a prime case study for the market's recovery. After a period of correction, its office market and broader economy are showing strong signs of a robust, tech-fueled resurgence.</p>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Office Market Rebound -->
+                    <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                        <h3 class="font-semibold text-xl mb-4 text-center">Office Market Turning the Corner</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start"><span class="kiln-green font-bold text-lg mr-3">✓</span><div><strong class="font-semibold">Record Leasing:</strong> Q1 2025 saw 3.4M sq ft leased, the highest quarterly total in 10 years.</div></li>
+                            <li class="flex items-start"><span class="kiln-green font-bold text-lg mr-3">✓</span><div><strong class="font-semibold">Flight to Quality:</strong> Class A properties accounted for 69% of total leasing activity in the first quarter, showing strong demand for premier space.</div></li>
+                            <li class="flex items-start"><span class="kiln-green font-bold text-lg mr-3">✓</span><div><strong class="font-semibold">Sublease Inventory Shrinks:</strong> Sublease availability dropped 13.6% year-over-year, signaling tightening supply.</div></li>
+                            <li class="flex items-start"><span class="kiln-green font-bold text-lg mr-3">✓</span><div><strong class="font-semibold">Large Deals Return:</strong> Eleven leases over 100,000 sq ft were signed in 2024, nearly triple the number from 2023.</div></li>
+                        </ul>
+                    </div>
+                    <!-- Economic Vitality -->
+                    <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                        <h3 class="font-semibold text-xl mb-4 text-center">Broad Economic Vitality</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start"><span class="kiln-blue font-bold text-lg mr-3">✓</span><div><strong class="font-semibold">Tech Dominance:</strong> Tech companies accounted for 50% of all leasing activity in 2024.</div></li>
+                             <li class="flex items-start"><span class="kiln-blue font-bold text-lg mr-3">✓</span><div><strong class="font-semibold">VC Investment Hub:</strong> The Bay Area attracted nearly half of all U.S. venture capital in 2024.</div></li>
+                            <li class="flex items-start"><span class="kiln-blue font-bold text-lg mr-3">✓</span><div><strong class="font-semibold">Job Growth Rebounds:</strong> The city is adding thousands of jobs, with unemployment at a low 3.7%.</div></li>
+                            <li class="flex items-start"><span class="kiln-blue font-bold text-lg mr-3">✓</span><div><strong class="font-semibold">Tourism & Conventions Roar Back:</strong> Visitor spending is projected to reach $9.4B in 2025, driving economic activity.</div></li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="text-center text-xs text-gray-400 mt-4">Sources: JLL, CBRE, Cushman & Wakefield, Kidder Mathews, CA EDD, PitchBook-NVCA, SF Travel Association</p>
+            </section>
+
+
+            <!-- Market Spotlight: Key Suburban & Tech Hubs -->
+            <section class="bg-white rounded-lg shadow-sm p-6 md:p-8 border border-gray-200">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2 text-center">Market Spotlight: Key Suburban & Tech Hubs</h2>
+                <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">The "flight to quality" is also concentrating demand in prime suburban markets, which are experiencing their own rapid tightening and offer a glimpse into the future of corporate location strategy.</p>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- Plano, TX -->
+                    <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                        <h3 class="font-semibold text-xl mb-4 text-center">Plano / Frisco, TX</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start"><span class="kiln-green font-bold text-lg mr-3">✓</span><div><strong class="font-semibold">Strong Absorption:</strong> The Upper Tollway/Plano submarket recorded over 250,000 sq ft of positive net absorption in Q1 2025.</div></li>
+                            <li class="flex items-start"><span class="kiln-green font-bold text-lg mr-3">✓</span><div><strong class="font-semibold">Rising Rents:</strong> Average Class A asking rents in Plano have surpassed $40.00 per sq ft, with high-end properties commanding significant premiums.</div></li>
+                            <li class="flex items-start"><span class="kiln-green font-bold text-lg mr-3">✓</span><div><strong class="font-semibold">Corporate Magnet:</strong> Major corporate relocations and expansions continue to fuel demand, tightening the market for large blocks of quality space.</div></li>
+                        </ul>
+                        <p class="text-center text-xs text-gray-400 mt-4">Source: Cushman & Wakefield Q1 2025 DFW Office Report</p>
+                    </div>
+                    <!-- Irvine, CA -->
+                    <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                        <h3 class="font-semibold text-xl mb-4 text-center">Irvine, CA</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start"><span class="kiln-blue font-bold text-lg mr-3">✓</span><div><strong class="font-semibold">Low Vacancy:</strong> Irvine's Class A vacancy rate of 12.8% is significantly lower than the Orange County average, indicating high demand for quality.</div></li>
+                             <li class="flex items-start"><span class="kiln-blue font-bold text-lg mr-3">✓</span><div><strong class="font-semibold">Positive Momentum:</strong> The Irvine Spectrum submarket recorded positive net absorption for the fifth consecutive quarter in Q1 2025.</div></li>
+                            <li class="flex items-start"><span class="kiln-blue font-bold text-lg mr-3">✓</span><div><strong class="font-semibold">Rent Growth:</strong> Class A asking rents in Irvine have increased over 4% year-over-year, outpacing the broader market.</div></li>
+                        </ul>
+                         <p class="text-center text-xs text-gray-400 mt-4">Source: JLL Q1 2025 Orange County Office Insights</p>
+                    </div>
+                     <!-- Bellevue, WA -->
+                    <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                        <h3 class="font-semibold text-xl mb-4 text-center">Bellevue, WA</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start"><span class="kiln-orange font-bold text-lg mr-3">✓</span><div><strong class="font-semibold">Leasing Surge:</strong> Bellevue's CBD saw a significant uptick in leasing in Q1 2025, accounting for nearly 40% of all activity on the Eastside.</div></li>
+                            <li class="flex items-start"><span class="kiln-orange font-bold text-lg mr-3">✓</span><div><strong class="font-semibold">Premium Rents:</strong> Trophy properties in Bellevue command rents over 20% higher than the rest of the market, with concessions beginning to burn off.</div></li>
+                             <li class="flex items-start"><span class="kiln-orange font-bold text-lg mr-3">✓</span><div><strong class="font-semibold">Shrinking Options:</strong> The availability of large blocks of contiguous high-quality space is rapidly decreasing due to demand from major tech tenants.</div></li>
+                        </ul>
+                         <p class="text-center text-xs text-gray-400 mt-4">Source: Broderick Group Q1 2025 Eastside Office Market Report</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- NEW Market Spotlights Continued -->
+            <section class="bg-white rounded-lg shadow-sm p-6 md:p-8 border border-gray-200">
+                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- Manhattan Beach, CA -->
+                    <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                        <h3 class="font-semibold text-xl mb-4 text-center">Manhattan Beach, CA</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start"><span class="kiln-blue font-bold text-lg mr-3">✓</span><div><strong class="font-semibold">Extremely Low Vacancy:</strong> This submarket consistently boasts one of the lowest vacancy rates in Los Angeles County, often in the single digits for Class A space.</div></li>
+                            <li class="flex items-start"><span class="kiln-blue font-bold text-lg mr-3">✓</span><div><strong class="font-semibold">High Barrier to Entry:</strong> Limited new construction and strong local demand from tech, media, and finance create a highly competitive leasing environment.</div></li>
+                            <li class="flex items-start"><span class="kiln-blue font-bold text-lg mr-3">✓</span><div><strong class="font-semibold">Premium Rents:</strong> Asking rents are among the highest in Southern California, reflecting the desirability and scarcity of space.</div></li>
+                        </ul>
+                        <p class="text-center text-xs text-gray-400 mt-4">Source: CBRE Q1 2025 Los Angeles Office Market Report</p>
+                    </div>
+                    <!-- Palo Alto, CA -->
+                    <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                        <h3 class="font-semibold text-xl mb-4 text-center">Palo Alto, CA</h3>
+                        <ul class="space-y-3">
+                             <li class="flex items-start"><span class="kiln-green font-bold text-lg mr-3">✓</span><div><strong class="font-semibold">Record Rents:</strong> Palo Alto continues to command some of the highest asking rents in the nation, driven by its status as a premier tech and VC hub.</div></li>
+                             <li class="flex items-start"><span class="kiln-green font-bold text-lg mr-3">✓</span><div><strong class="font-semibold">Resilient Demand:</strong> Despite some sublease availability, demand from AI and venture-backed startups for high-quality space remains robust.</div></li>
+                            <li class="flex items-start"><span class="kiln-green font-bold text-lg mr-3">✓</span><div><strong class="font-semibold">Limited Supply:</strong> Very little new construction means existing quality buildings are highly coveted, keeping the market tight for desirable space.</div></li>
+                        </ul>
+                         <p class="text-center text-xs text-gray-400 mt-4">Source: JLL Q1 2025 Silicon Valley Office Insights</p>
+                    </div>
+                     <!-- San Jose, CA -->
+                    <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                        <h3 class="font-semibold text-xl mb-4 text-center">San Jose, CA</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start"><span class="kiln-orange font-bold text-lg mr-3">✓</span><div><strong class="font-semibold">Leasing Velocity:</strong> North San Jose saw a significant increase in leasing velocity in Q1 2025, driven by large requirements from tech tenants.</div></li>
+                            <li class="flex items-start"><span class="kiln-orange font-bold text-lg mr-3">✓</span><div><strong class="font-semibold">Positive Absorption:</strong> The submarket recorded positive net absorption for Class A space as companies consolidated into higher-quality buildings.</div></li>
+                             <li class="flex items-start"><span class="kiln-orange font-bold text-lg mr-3">✓</span><div><strong class="font-semibold">Stabilizing Vacancy:</strong> While overall vacancy is elevated, the vacancy for prime, well-amenitized projects is tightening.</div></li>
+                        </ul>
+                         <p class="text-center text-xs text-gray-400 mt-4">Source: Cushman & Wakefield Q1 2025 Silicon Valley Report</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="bg-white rounded-lg shadow-sm p-6 md:p-8 border border-gray-200">
+                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                     <!-- North San Diego, CA -->
+                    <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                        <h3 class="font-semibold text-xl mb-4 text-center">North San Diego, CA</h3>
+                        <ul class="space-y-3">
+                             <li class="flex items-start"><span class="kiln-green font-bold text-lg mr-3">✓</span><div><strong class="font-semibold">Premier Submarket Demand:</strong> Del Mar Heights and UTC boast single-digit vacancy rates for Class A properties, well below the county average.</div></li>
+                             <li class="flex items-start"><span class="kiln-green font-bold text-lg mr-3">✓</span><div><strong class="font-semibold">Strong Rent Growth:</strong> These submarkets have experienced the highest rent growth in San Diego, driven by tech and professional services tenants.</div></li>
+                            <li class="flex items-start"><span class="kiln-green font-bold text-lg mr-3">✓</span><div><strong class="font-semibold">Concentrated Leasing:</strong> A majority of the region's large office leases are concentrated in these highly desirable, amenity-rich coastal communities.</div></li>
+                        </ul>
+                         <p class="text-center text-xs text-gray-400 mt-4">Source: CBRE Q1 2025 San Diego Office MarketView</p>
+                    </div>
+                     <!-- Henderson, NV -->
+                    <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                        <h3 class="font-semibold text-xl mb-4 text-center">Henderson, NV</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start"><span class="kiln-blue font-bold text-lg mr-3">✓</span><div><strong class="font-semibold">Strong Demand:</strong> Henderson captured a significant share of the Las Vegas valley's positive net absorption in Q1 2025.</div></li>
+                            <li class="flex items-start"><span class="kiln-blue font-bold text-lg mr-3">✓</span><div><strong class="font-semibold">Corporate Destination:</strong> The submarket is a key destination for corporate relocations, particularly for finance and professional services firms.</div></li>
+                             <li class="flex items-start"><span class="kiln-blue font-bold text-lg mr-3">✓</span><div><strong class="font-semibold">Declining Vacancy:</strong> The Class A vacancy rate in Henderson has been steadily declining and is well below the overall market average.</div></li>
+                        </ul>
+                         <p class="text-center text-xs text-gray-400 mt-4">Source: Colliers Q1 2025 Las Vegas Office Market Report</p>
+                    </div>
+                     <!-- Tempe, AZ -->
+                    <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                        <h3 class="font-semibold text-xl mb-4 text-center">Tempe, AZ</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start"><span class="kiln-orange font-bold text-lg mr-3">✓</span><div><strong class="font-semibold">Positive Absorption:</strong> Tempe recorded strong positive net absorption in Q1 2025, one of the top-performing submarkets in the Phoenix area.</div></li>
+                             <li class="flex items-start"><span class="kiln-orange font-bold text-lg mr-3">✓</span><div><strong class="font-semibold">Low Class A Vacancy:</strong> The Class A vacancy rate in Tempe is in the low teens, significantly below the metro average, and continues to decline.</div></li>
+                            <li class="flex items-start"><span class="kiln-orange font-bold text-lg mr-3">✓</span><div><strong class="font-semibold">Constrained Pipeline:</strong> Very little new office construction is underway, meaning competition for existing prime space will intensify.</div></li>
+                        </ul>
+                         <p class="text-center text-xs text-gray-400 mt-4">Source: JLL Q1 2025 Phoenix Office Insight</p>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Flex Space Explosion -->
+            <section class="bg-gray-900 text-white rounded-lg shadow-sm p-8 md:p-12">
+                <h2 class="text-3xl font-bold mb-2 text-center">The Ascendant Ecosystem of Coworking & Flex Space</h2>
+                <p class="text-center text-gray-400 mb-10 max-w-3xl mx-auto">The flex sector is a vital component of modern real estate strategy, driven by corporate demand for agility and operators who are actively expanding to meet that demand.</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                    <div class="bg-gray-800 p-6 rounded-lg">
+                        <p class="text-gray-400 text-lg">National Footprint Growth</p>
+                        <p class="text-5xl kpi-value text-white">+4M</p>
+                        <p class="text-gray-400 mt-1">Sq. Ft. Added in Q1 2025 Alone</p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg">
+                        <p class="text-gray-400 text-lg">Share of U.S. Leasing</p>
+                        <p class="text-5xl kpi-value kiln-orange">14.7%</p>
+                        <p class="text-gray-400 mt-1">of all office leasing was by flex operators in Q1 2025.</p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg">
+                        <p class="text-gray-400 text-lg">U.S. Coworking Locations</p>
+                        <p class="text-5xl kpi-value text-white">25% ▲</p>
+                        <p class="text-gray-400 mt-1">Year-Over-Year Growth (Q1 2025)</p>
+                    </div>
+                </div>
+                 <p class="text-center text-xs text-gray-400 mt-4">Sources: CoworkingCafe, JLL Q1 2025 U.S. Office Outlook, CommercialEdge</p>
+            </section>
+            
+            <!-- NEW Coworking Operator Expansion Section -->
+            <section class="bg-white rounded-lg shadow-sm p-6 md:p-8 border border-gray-200">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2 text-center">Operator Expansion: Racing to Meet Demand</h2>
+                <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">The surge in corporate demand is not just a forecast; it's fueling aggressive, real-time expansion by coworking operators who are rapidly absorbing available high-quality space.</p>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <div class="bg-gray-50 p-6 rounded-lg border border-gray-200 text-center">
+                        <h3 class="font-semibold text-xl mb-2">Operator Confidence</h3>
+                        <p class="text-6xl kpi-value kiln-green">80%</p>
+                        <p class="text-gray-600 mt-2">of existing flex operators plan to expand their portfolio by 2026.</p>
+                        <p class="text-center text-xs text-gray-400 mt-4">Source: The Instant Group</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg border border-gray-200 text-center">
+                        <h3 class="font-semibold text-xl mb-2">Corporate Expansion Driver</h3>
+                        <p class="text-6xl kpi-value kiln-blue">59%</p>
+                        <p class="text-gray-600 mt-2">of companies planning to grow their office footprint are choosing flex space to do so.</p>
+                         <p class="text-center text-xs text-gray-400 mt-4">Source: WeWork/Opinium Survey</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg border border-gray-200 text-center">
+                        <h3 class="font-semibold text-xl mb-2">Tangible Growth</h3>
+                        <p class="text-6xl kpi-value kiln-orange">145</p>
+                        <p class="text-gray-600 mt-2">new coworking locations opened in the U.S. in Q1 2025 alone.</p>
+                         <p class="text-center text-xs text-gray-400 mt-4">Source: CoworkingCafe</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- NEW Surging Demand in Key Markets Section -->
+            <section class="bg-white rounded-lg shadow-sm p-6 md:p-8 border border-gray-200">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2 text-center">Surging Demand: Flex Heats Up in Key Markets</h2>
+                <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">Demand for flexible workspace is outpacing supply in major tech and growth hubs, demonstrating the sector's resilience and underscoring the opportunity in these key geographies.</p>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <div class="bg-gray-50 p-6 rounded-lg border border-gray-200 text-center">
+                        <h3 class="font-semibold text-xl mb-2">Seattle</h3>
+                        <p class="text-6xl kpi-value kiln-green">+57%</p>
+                        <p class="text-gray-600 mt-2">Increase in demand for flex space since 2019, while supply has only grown 8%.</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg border border-gray-200 text-center">
+                        <h3 class="font-semibold text-xl mb-2">Los Angeles</h3>
+                        <p class="text-6xl kpi-value kiln-blue">+31%</p>
+                        <p class="text-gray-600 mt-2">Increase in demand for flex space since 2019, while supply has only grown 5%.</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg border border-gray-200 text-center">
+                        <h3 class="font-semibold text-xl mb-2">San Francisco</h3>
+                        <p class="text-6xl kpi-value kiln-orange">+24%</p>
+                        <p class="text-gray-600 mt-2">Increase in demand for flex space since 2019, while supply has remained flat.</p>
+                    </div>
+                </div>
+                 <p class="text-center text-xs text-gray-400 mt-4">Source: The Instant Group, "Five Years After Covid" Report</p>
+            </section>
+
+
+            <!-- Summary & Strategic Imperatives -->
+            <section class="bg-gray-50 rounded-lg p-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">Strategic Outlook: A Market at an Inflection Point</h2>
+                <p class="text-lg text-gray-600 mb-10 max-w-3xl mx-auto text-center">The data reveals a clear narrative: the U.S. office market has reached a turning point. The era of tenant advantage is giving way to a more balanced, and increasingly competitive, landscape.</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                    <div class="bg-white p-6 rounded-lg border border-gray-200">
+                        <div class="mb-4"><svg class="h-8 w-8 kiln-orange" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-3.75-2.25m3.75 2.25l-6-3m6 3v6m-3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg></div>
+                         <h3 class="text-xl font-semibold text-gray-900 mb-3">The Market Has Tightened</h3>
+                         <p class="text-gray-600 text-sm">Key indicators like rising rents for Trophy assets, declining landlord concessions, and positive absorption in prime markets show that tenant-favorable conditions are waning.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg border border-gray-200">
+                        <div class="mb-4"><svg class="h-8 w-8 kiln-green" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" /></svg></div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Quality Space is Already Scarce</h3>
+                        <p class="text-gray-600 text-sm">The "hidden tightness" in desirable markets like San Francisco, Irvine, and Bellevue reveals that the inventory companies actually want is limited and in high demand.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg border border-gray-200">
+                         <div class="mb-4"><svg class="h-8 w-8 kiln-blue" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.63 2.18a14.98 14.98 0 00-5.84 7.38m5.84 2.58v-4.8m0 4.8a14.98 14.98 0 016.16-12.12A14.98 14.98 0 019.63 2.18a14.98 14.98 0 01-5.84 7.38m5.84 2.58l-2.16-2.16m2.16 2.16l2.16 2.16" /></svg></div>
+                         <h3 class="text-xl font-semibold text-gray-900 mb-3">The Strategic Role of Flex Space</h3>
+                         <p class="text-gray-600 text-sm">The coworking sector is not just growing, it's actively absorbing market share, with operators expanding aggressively to meet surging corporate demand in key tech hubs.</p>
+                    </div>
+                </div>
+                 <div class="mt-10 max-w-4xl mx-auto">
+                    <blockquote class="text-center border-l-4" style="border-color: #F97316; background-color: #FFF7ED; padding: 1.5rem;">
+                        <p class="text-lg font-medium leading-relaxed" style="color: #9A3412;">
+                            The convergence of these trends suggests the window for securing favorable deals on prime assets is currently open, but as the market tightens, opportunities may become more competitive.
+                        </p>
+                    </blockquote>
+                </div>
+            </section>
+            
+        </main>
+
+
+        <!-- Footer -->
+        <footer class="text-center mt-12 py-6 border-t border-gray-200">
+            <p class="text-sm text-gray-500">Data synthesized from Q1 2025 market reports (JLL, CBRE, Avison Young, Cushman & Wakefield, Broderick Group, Colliers, Kidder Mathews, etc.) and industry analysis.</p>
+        </footer>
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Kiln-Inspired Color Palette
+            const kilnPalette = {
+                orange: '#F97316',
+                green: '#10B981',
+                red: '#EF4444',
+                blue: '#3B82F6',
+                darkGray: '#374151',
+                lightGray: '#E5E7EB'
+            };
+
+
+            // Global configuration for chart tooltips
+            const globalTooltipConfig = {
+                plugins: {
+                    tooltip: {
+                        backgroundColor: '#FFFFFF',
+                        titleColor: '#1F2937',
+                        bodyColor: '#4B5563',
+                        borderColor: kilnPalette.lightGray,
+                        borderWidth: 1,
+                        padding: 10,
+                        bodyFont: { weight: '500' },
+                        titleFont: { weight: '600' }
+                    }
+                }
+            };
+            
+            // --- Chart 1: Net Absorption ---
+            const netAbsorptionCtx = document.getElementById('netAbsorptionChart');
+            if (netAbsorptionCtx) {
+                new Chart(netAbsorptionCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Prime Assets', 'Non-Prime Assets'],
+                        datasets: [{
+                            label: 'Net Absorption (Million Sq. Ft.)',
+                            data: [60, -165],
+                            backgroundColor: [kilnPalette.green, kilnPalette.red],
+                            borderRadius: 4
+                        }]
+                    },
+                    options: {
+                        responsive: true, maintainAspectRatio: false,
+                        plugins: { ...globalTooltipConfig.plugins, legend: { display: false } },
+                        scales: { y: { beginAtZero: false, title: { display: true, text: 'Square Feet (Millions)' } } },
+                        indexAxis: 'y',
+                    }
+                });
+            }
+
+
+            // --- Transaction Activity by Class Chart ---
+            const transactionActivityCtx = document.getElementById('transactionActivityChart');
+            if (transactionActivityCtx) {
+                new Chart(transactionActivityCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['2019', '2022', 'Q1 2025'],
+                        datasets: [
+                            {
+                                label: 'Trophy',
+                                data: [21.4, 25.7, 44.6],
+                                backgroundColor: kilnPalette.orange,
+                            },
+                            {
+                                label: 'Class A',
+                                data: [54.0, 43.4, 35.3],
+                                backgroundColor: kilnPalette.green,
+                            },
+                            {
+                                label: 'Class B/C',
+                                data: [24.6, 30.9, 20.0],
+                                backgroundColor: kilnPalette.darkGray,
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true, maintainAspectRatio: false,
+                        plugins: { ...globalTooltipConfig.plugins, legend: { position: 'bottom' } },
+                        scales: { 
+                            x: { stacked: true },
+                            y: { 
+                                stacked: true,
+                                max: 100,
+                                ticks: {
+                                    callback: function(value) { return value + '%'; }
+                                },
+                                title: { display: true, text: 'Share of Transaction Activity' }
+                            } 
+                        },
+                    }
+                });
+            }
+
+
+            // --- Concessions Trend Chart ---
+            const concessionsCtx = document.getElementById('concessionsChart');
+            if (concessionsCtx) {
+                new Chart(concessionsCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['2021', '2022', '2023', '2024', 'Q1 2025'],
+                        datasets: [{
+                            label: 'Concessions as % of Lease Term',
+                            data: [21.9, 23.5, 24.3, 24.4, 23.6], // Data from Avison Young Report, p.29
+                            backgroundColor: kilnPalette.blue,
+                            borderRadius: 4
+                        }]
+                    },
+                    options: {
+                        responsive: true, maintainAspectRatio: false,
+                        plugins: { ...globalTooltipConfig.plugins, legend: { display: false } },
+                        scales: { 
+                            y: { 
+                                beginAtZero: false,
+                                min: 20,
+                                ticks: {
+                                    callback: function(value) { return value + '%'; }
+                                },
+                                title: { display: true, text: 'Concession Value (%)' }
+                            } 
+                        },
+                    }
+                });
+            }
+
+
+            // --- Supply vs. Removals Chart ---
+            const supplyVsRemovalsCtx = document.getElementById('supplyVsRemovalsChart');
+            if(supplyVsRemovalsCtx) {
+                new Chart(supplyVsRemovalsCtx, {
+                    type: 'line',
+                    data: {
+                        labels: ['2023', '2024', '2025 (Proj.)'],
+                        datasets: [{
+                            label: 'New Construction',
+                            data: [45, 25, 12.7],
+                            borderColor: kilnPalette.blue,
+                            backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                            fill: true, tension: 0.3
+                        }, {
+                            label: 'Inventory Removed',
+                            data: [15, 20, 23.3],
+                            borderColor: kilnPalette.green,
+                            backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                            fill: true, tension: 0.3
+                        }]
+                    },
+                    options: {
+                        responsive: true, maintainAspectRatio: false,
+                        plugins: { ...globalTooltipConfig.plugins, legend: { position: 'bottom' } },
+                        scales: { y: { title: { display: true, text: 'Square Feet (Millions)' } } },
+                    }
+                });
+            }
+            
+            // --- Office Conversion Types Chart ---
+            const conversionsChartCtx = document.getElementById('conversionsChart');
+            if(conversionsChartCtx) {
+                new Chart(conversionsChartCtx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Residential', 'Other Uses'],
+                        datasets: [{
+                            data: [76, 24],
+                            backgroundColor: [kilnPalette.orange, kilnPalette.darkGray],
+                            hoverOffset: 8, borderWidth: 0
+                        }]
+                    },
+                    options: {
+                        responsive: true, maintainAspectRatio: false,
+                        cutout: '60%',
+                        plugins: { ...globalTooltipConfig.plugins, legend: { position: 'bottom' } }
+                    }
+                });
+            }
+        }); 
+    </script>
+</body>
+</html>
